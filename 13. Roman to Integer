@@ -1,0 +1,34 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+public class romantoint
+{
+	public static void main(String args[])
+	{
+		Scanner in=new Scanner(System.in);
+		String s;
+		int i,sum=0;
+		char ch;
+		System.out.println("Enter a Roman containing:I|V|X|L|C|D|M");
+		s=in.nextLine();
+		for(i=0;i<s.length();i++)
+		{
+		ch=s.charAt(i);
+		if(ch=='I')
+			sum=sum+1;
+		if(ch=='v')
+			sum=sum+5;
+		if(ch=='x')
+			sum=sum+10;
+		if(ch=='L')
+			sum=sum+50;
+		if(ch=='C')
+			sum=sum+100;
+		if(ch=='D')
+			sum=sum+500;
+		if(ch=='M')
+			sum=sum+1000;
+		}
+		System.out.println(sum);
+	}
+}
